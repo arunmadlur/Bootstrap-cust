@@ -1,0 +1,129 @@
+.no-category-container .knowledge-bank-section{
+	margin-top:30px;
+	display:inline-block;
+}
+.knowledge-bank-section{
+	width:100%;
+	margin-top:20px;
+	min-height:300px;
+}
+.knowledge-bank-section .containter-part{
+	position:relative;
+}
+.article_section .rel-art .knowledge-bank-section .containter-part {
+	padding-left:0
+}
+.article_section .knowledge-bank-section .containter-part {
+	width:100%
+}
+.knowledge-bank-section h3,.recently_viewed_footer h3 {
+	padding-bottom:5px;
+}
+.knowledge-bank-section h3:after {
+	content:"";
+	width:78%;
+	background:#222;
+	height:2px;
+	position:relative;
+	top:-5px;
+	margin-left:1%;
+	display:inline-block
+}
+.article_section .knowledge-bank-section .containter-part h3:after{
+	width: auto;
+  	background: #fff;
+}
+.card_arrows {
+	background:url($header-sprite) no-repeat;
+	width:26px;
+	height:42px;
+	display:block;
+	position:absolute;
+	top:329px;
+	z-index:1
+}
+.prev_arrow {
+	left:0;
+	background-position:-1px -36px
+}
+.next_arrow {
+	right:0;
+	background-position:-31px -36px
+}
+.article_section .knowledge-bank-section .prev_arrow {
+	left:-25px
+}
+
+.article_section .knowledge-bank-section .next_arrow {
+	right:-14px
+}
+.knowledge-bank-section .card_arrows {
+	top:125px
+}
+
+.knowledge-bank-section .prev_arrow {
+	left:15px
+}
+.knowledge-bank-section .next_arrow {
+	right:15px
+}
+.rel-art .knowledge-bank-div_outer {
+	height:330px
+}
+.knowledge-bank-div_outer {
+	width:95%;
+	margin:0 auto;
+	overflow:hidden;
+
+}
+.knowledge-bank-div {
+	width:10000px;
+	margin:0 auto;
+	display:inline-block;
+}
+.rel-art .cr_kn .inner-section {
+	width:215px
+}
+.cr_kn .inner-section {
+	padding-left:0;
+	float:left;
+	width:225px
+}
+.knowledge-bank-section .inner-section {
+	display:inline-block;
+	padding-left:28px;
+	vertical-align:top;
+}
+.article_section .knowledge-bank-section .inner-section .video_caro_in_cr:first-child {
+	margin-left:0
+}
+.knowledge-bank-section .knowledge-bank-div li a {
+	color:#333;
+	display:block;
+	padding:5px 5px 15px;
+}
+.knowledge-bank-section .inner-section img {
+	width:100%;
+	height:150px;
+}
+.rel-art .knowledge-bank-section .container p {
+	text-align:left;
+	max-height:105px;
+	overflow:hidden;
+}
+.resources_article-container p {
+	color:#777;
+	font-size:16px;
+	line-height:27px;
+	font-weight:300;
+}
+.knowledge-bank-section p {
+	display:block;
+	margin-top:10px;
+	color:#222;
+	font-weight:400;
+	font-size:14px;
+	line-height:18px;
+	overflow:hidden;
+	max-height:73px;
+}

@@ -1,0 +1,39 @@
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+// Transformation
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+
+
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: ($line-height-computed / 2);
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+// List options
+
+// [converter] extracted from `.list-unstyled` for libsass compatibility
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+// [converter] extracted as `@mixin list-unstyled` for libsass compatibility
+.list-unstyled {
+  @include list-unstyled;
+}

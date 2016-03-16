@@ -1,0 +1,341 @@
+// Common form controls
+//
+// Shared size and type resets for form controls. Apply `.form-control` to any
+// of the following form controls:
+//
+// select
+// textarea
+// input[type="text"]
+// input[type="password"]
+// input[type="datetime"]
+// input[type="datetime-local"]
+// input[type="date"]
+// input[type="month"]
+// input[type="time"]
+// input[type="week"]
+// input[type="number"]
+// input[type="email"]
+// input[type="url"]
+// input[type="search"]
+// input[type="tel"]
+// input[type="color"]
+
+input, select, textarea {
+	outline:$outline;
+}
+.form-control{
+  display:block;
+  width:100%;
+  height:34px;
+  padding:6px 12px;
+  font-size:14px;
+  line-height:1.42857143;
+  color:#555;
+  background-color:#fff;
+  background-image:none;
+  border:1px solid $border-color;
+  border-radius:4px;
+  -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow:inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s
+}
+.form-control-material{
+  display: block;
+  width: 100%;
+  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+ // padding: $padding-base-vertical $padding-base-horizontal;
+  font-size:14px;
+  line-height:$line-height-base;
+  color:$grey-light;
+  font-weight:$medium;
+  background-color: $input-bg;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border:0;
+  border-bottom: 1px solid $border-color;
+}
+.form-control-wrapper{
+  position:relative;  
+  margin-bottom: 30px;
+}
+.error_msg.success_msg {
+  color:$check-color;
+  background:#CFF5DE;
+}
+.error_msg {
+background:#fcebd1;
+font-size:13px;
+color:#222;
+border-radius:4px;
+padding:5px;
+margin-bottom:10px;
+line-height:17px
+}
+.error_msg {
+  color:$error-color
+}
+
+
+input[type=text]:disabled{
+  color: $grey-lighter;
+  border-bottom: 1px dotted $border-color;
+  cursor: default;
+  font-weight:$light;
+  + .floating-label.active{
+    top:-15px;
+    font-size:11px;
+    font-weight:$light;
+    color:$grey-lighter;
+  }
+}
+
+.select_box select{
+  color:$grey-lighter;
+  font-weight:$book;
+}
+.floating-label{
+  position:absolute;
+  top:12px;left:0;
+  transition: .2s ease all;
+  pointer-events: none;
+  color:$grey-lighter;
+  font-size:13px;
+  font-weight:$light;
+}
+.floating-label_border{
+  border-bottom:2px solid $check-color;
+  width:0;height: 1px;
+  margin:-1px auto auto auto;
+  transition: width $ease, border-bottom $ease;
+}
+input:focus,textarea:focus{
+  + .floating-label{
+    top:-15px;
+    font-size:11px;
+    font-weight:$light;
+    color:$check-color;  
+  }
+} 
+input:focus,textarea:focus{
+ ~ .floating-label_border{
+    width:100%;
+    border-bottom:2px solid $check-color;
+    margin-top: -1px;
+  }
+}
+.error, .error_field {
+  + .floating-label{
+    color:$error-color;
+    top:-13px;
+    font-size:11px;
+    font-weight:$light;
+  }
+}
+input:not(:empty) {
+  + .floating-label {
+    top:-15px;
+  }
+}
+.error, .error_field {
+  ~ .floating-label_border{
+    width:100%;
+    border-bottom:1px solid $error-color;
+    margin-top: -1px;
+  }
+}  
+input[type='checkbox']{
+display:none;
+box-sizing: $box-sizing;
+}
+.form-checkbox input[type=checkbox]:checked+.checkbox-material .check, .checkbox-default input[type=checkbox]:checked+.checkbox-material .check{
+  color: $check-color ;
+}
+input[type=checkbox] {
+  opacity: 0;
+  color: #D8D8D8 ;
+  position: absolute;
+  margin: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: 0;
+  pointer-events: none;
+}
+.form-checkbox {
+ transform: translateZ(0); // Force 3d rendering
+ }
+.form-checkbox {
+  label {
+    @extend .label-3;
+    cursor: $cursor;
+    padding-left: 0px; 
+    
+  }
+}
+.checkbox-material {
+  vertical-align: middle;
+  position: relative;
+  top: 2px;
+  margin-right: 6px;
+  &:before{
+    display: block;
+    position: absolute;
+    left: 0;
+    content: "";
+    background-color: rgb(50,206,125);
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    z-index: 1;
+    opacity: 0;
+    margin: 0;
+    transform: scale3d(2.3, 2.3, 1);
+  }
+  .check{
+    position: relative;
+    color: $border-color;
+    display: inline-block;
+    width:16px;
+    height: 16px;
+    border: 2px solid;
+    border-radius: 3px;
+    overflow: hidden;
+    z-index: 1;
+    &:before{
+      position: absolute;
+      content: "";
+      @include rotate(45deg);
+      display: block;
+      margin-top: -6px;
+      margin-left: 4px;
+      width: 0;
+      height: 0;
+      @include box-shadow(0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0 inset);
+      animation: checkbox-off .3s forwards;
+    }
+  }
+}
+input[type=checkbox]:focus + .checkbox-material .check:after {
+ opacity: 0.2;
+}
+
+input[type=checkbox]:checked + .checkbox-material .check:before {
+ @include box-shadow(0 0 0 10px,10px -10px 0 10px,32px 0px 0 20px,0px 32px 0 20px,-5px 5px 0 10px,20px -12px 0 11px);   
+ animation: checkbox-on .3s forwards;
+}
+
+@keyframes checkbox-on {
+ 0% {
+   @include box-shadow(0 0 0 10px,10px -10px 0 10px,32px 0px 0 20px,0px 32px 0 20px,-5px 5px 0 10px,15px 2px 0 11px);
+ }
+ 50% {
+   @include box-shadow(0 0 0 10px,10px -10px 0 10px,32px 0px 0 20px,0px 32px 0 20px,-5px 5px 0 10px,20px -12px 0 11px);
+ }
+ 100% {
+  @include box-shadow(0 0 0 10px,10px -10px 0 10px,32px 0px 0 20px,0px 32px 0 20px,-5px 5px 0 10px,20px -12px 0 11px);
+ }
+}
+@keyframes checkbox-off {
+ 0% {
+   @include box-shadow(0 0 0 10px,10px -10px 0 10px,32px 0px 0 20px,0px 32px 0 20px,-5px 5px 0 10px,20px -12px 0 11px,0 0 0 0 inset);    
+ }
+ 25% {
+   @include box-shadow(0 0 0 10px,10px -10px 0 10px,32px 0px 0 20px,0px 32px 0 20px,-5px 5px 0 10px,20px -12px 0 11px,0 0 0 0 inset);   
+ }
+ 50% {
+  @include rotate(45deg);
+   margin-top: -4px;
+   margin-left: 6px;
+   width: 0px;
+   height: 0px;
+   @include box-shadow(0 0 0 10px,10px -10px 0 10px,32px 0px 0 20px,0px 32px 0 20px,-5px 5px 0 10px,15px 2px 0 11px,0 0 0 0 inset);
+ }
+ 51% {
+   @include rotate(0deg);
+   margin-top: -2px;
+   margin-left: -2px;
+   width: 16px;
+   height: 16px;
+   @include box-shadow(0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0px 0px 0 10px inset);
+ }
+ 100% {
+   @include rotate(0deg);
+   margin-top: -2px;
+   margin-left: -2px;
+   width: 16px;
+   height: 16px;
+   @include box-shadow(0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0px 0px 0 0px inset);
+ }
+}
+
+.radio-success input[type=radio]:checked~.circle{
+  border-color: $check-color;
+}
+.radio-success input[type=radio]:checked~.check{
+ background-color: $check-color;
+}
+.form-radio input[type=radio]:checked~.check{
+ -webkit-transform: scale3d(.55,.55,1);
+ transform: scale3d(.55,.55,1);
+}
+.form-radio input[type=radio] {
+ opacity: 0;
+ height: 0;
+ width: 0;
+ overflow: hidden;
+}
+.form-radio {
+ margin-bottom: 10px;
+}
+.form-radio{
+  label{
+    @extend .label-3;
+   cursor: pointer;
+   padding-left: 31px;
+   position: relative;
+  
+  }
+}
+.form-radio{ 
+  >label {
+    span{
+     display: block;
+     position: absolute;
+     left: 10px;
+     top: 0px;
+     transition-duration: 0.2s;
+    }
+    .circle{
+      border: 2px solid $border-color;
+      height: 16px;
+      width: 16px;
+      border-radius: 100%;
+    }
+    .check{
+      height: 16px;
+      width: 16px;
+      margin-left:0px;
+      margin-top: 0px;
+      border-radius: 100%;
+      background-color: rgba(0,0,0,.84);
+      transform: scale3d(0, 0, 0);
+      &:after{
+        display: block;
+        position: absolute;
+        content: "";
+        background-color: rgba(0,0,0,.84);
+        left: -18px;
+        top: -18px;
+        height: 50px;
+        width: 50px;
+        border-radius: 100%;
+        z-index: 1;
+        opacity: 0;
+        margin: 0;
+        transform: scale3d(1.5, 1.5, 1);
+      }
+    }
+  }
+}

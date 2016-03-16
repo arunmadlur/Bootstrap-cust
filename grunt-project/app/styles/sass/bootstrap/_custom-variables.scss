@@ -1,0 +1,54 @@
+//for each ice9 buttons, define text, background and border color
+
+//primary buttons
+$primary-color:#f5ab40;
+$secondary-color:#00a7dc;
+$ternary-color:#0080a7;
+
+//header colors
+$header-color:rgba(0, 0, 0, 0.9);
+
+//backgroud light color
+$background-light:#efefef;
+
+//border-color
+$border-color:#d6d6d6;
+$border-color-light:#edeff0;
+
+//grey colors
+$grey:#3b444f;
+$grey-light:#5e676d;
+$grey-lighter:#a1abb2;
+
+//material forms colors
+$check-color:#5ac669;
+$error-color:#ff0000;
+
+//sprite images variable
+$common-path:'http://cfs9.simplicdn.net/frontend/images';
+$home-page-sprite:$common-path + '/home-page_sprite_v1.png';
+$media-home:$common-path + '/content_sprite_v6.png';
+$header-sprite:$common-path + '/header_sprite_v10.png';
+$course-page-sprite:$common-path + '/course_sprite_v8.png';
+$course-page-sprite2:$common-path + '/new-couuse-sprite.png';
+$course-list:$common-path + '/course_list_sprite_v2.png';
+$frs:$common-path + '/free-resources_sprite_imgae.png';
+$about-page:$common-path + '/about-sprite.png';
+$media-page:$common-path + '/media_sprite_v5.jpg';
+$affiliate-page:$common-path + '/affiliate_sprite.png';
+$atp-page:$common-path + 	'/atp_sprite.png';
+
+
+$font-size-h1o: (($font-size-base + 18)) !default; // ~54px
+$margin-bottom : 15px;
+$p-line-height :20px;
+$outline:none;
+$border:none;
+$ease:.5s ease;
+$box-sizing: border-box;
+$cursor: pointer;
+$header-link:#ffffff;
+$frs-nav:#1c1206;
+$custom-bg-frs:#f5f5f5;
+$width:100%;
+$height:100%;

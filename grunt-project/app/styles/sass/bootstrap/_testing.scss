@@ -1,0 +1,122 @@
+.bg-class{
+     background-color:#B6B6B6;
+}
+
+.background-div{
+	background:$headings-bg-dark;
+}
+.bts {
+	margin-bottom:$margin-bottom;
+}
+.primary-color{
+	color:$primary-color;
+}
+.secondary-color{
+	color:$secondary-color;
+}
+.ternary-color{
+	color:$ternary-color
+}
+.background-light{
+	color:$background-light
+}
+.border-color{
+	color:$border-color
+}
+.border-color-light{
+	color:$border-color-light;
+}
+.heading-color{
+	color:$grey
+}
+.default-color{
+	color:$grey-light;
+}
+.lighter-color{
+	color:$grey-lighter;
+}
+.check-color{
+	color:$check-color
+}
+.error-color{
+	color:$error-color		
+}
+
+.home-sprite {
+    background:url($home-page-sprite);
+    width: 155px;
+   height: 50px;
+    background-position: -10px -9px;
+    display:inline-block;
+}
+.media-img {
+    background:url($media-home);
+    background-position: -15px -236px;
+    height: 50px;
+   width: 191px;
+    display:inline-block;
+
+}
+.footer-icon {
+    background:url($header-sprite) #000;
+    background-position: -62px -628px ;
+    height: 22px;
+   width:22px;
+    display:inline-block;
+}
+.course-icon {
+    background:url($course-page-sprite);
+    background-position: -2px -74px ;
+    width: 34px;
+   height: 32px;
+    display:inline-block;
+}
+.course-icon2 {
+    background:url($course-page-sprite2);
+    background-position:-391px -9px ;
+    width: 20px;
+   height: 22px;
+    display:inline-block;
+}
+.course-list{
+    background:url($course-list);
+    background-position:-94px -131px;
+    width: 14px;
+   height: 17px;
+    display:inline-block;
+}
+.frs{
+    background:url($frs);
+    background-position:-183px -96px;
+    width: 15px;
+   height: 15px;
+    display:inline-block;
+}
+.about-page{
+    background:url($about-page);
+    background-position:-3px -4px;
+    width: 69px;
+   height: 68px;
+    display:inline-block;
+}
+.media-page{
+    background:url($media-page);
+    background-position:0px -1000px;
+    width: 150px;
+   height: 45px;
+    display:inline-block;
+}
+.affiliate-page{
+    background:url($affiliate-page);
+    background-position:-170px -133px;
+    width: 125px;
+   height: 100px;
+    display:inline-block;
+}
+.atp-page{
+    background:url($atp-page);
+    background-position:-196px -5px;
+    width: 83px;
+   height: 83px;
+    display:inline-block;
+}

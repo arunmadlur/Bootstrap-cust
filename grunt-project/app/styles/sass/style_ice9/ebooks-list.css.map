@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAAA,eAAgB;EACf,OAAO,EAAC,KAAK;EACb,cAAc,EAAC,IAAI",
+"sources": ["ebooks-list.scss"],
+"names": [],
+"file": "ebooks-list.css"
+}

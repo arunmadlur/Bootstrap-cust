@@ -1,0 +1,65 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+// endbower
+@import "sass/style.scss";
+
+body {
+  font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 24px;
+}
+.h1-text{
+	font-size:24px;
+  
+}
+
+.frs-nav{
+  z-index: 1;
+}
+.main-menu{
+  font-size: 14px;
+  line-height: 1.1;
+  color: #ffffff;
+}
+.main-menu:before{
+    background: url(http://cfi10.simplicdn.net/frontend/images/home-page_sprite_v3.png) no-repeat;
+    background-position: -462px -103px;
+    // background-position: -462px -129px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    content: "";
+    vertical-align: middle;
+    margin-right: 12px;
+}
+.mid_logo {
+    position: absolute;
+    width: 146px;
+    height: 39px;
+    top:0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+}
+.logo {
+    float: left;
+    display: inline-block;
+    width: 146px;
+    height: 39px;
+    margin: 14px 0;
+}
+.main-bg{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/head.jpg) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    display: inline-block;
+    margin-top: -80px;
+}

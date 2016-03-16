@@ -1,0 +1,287 @@
+
+
+$headers:h1,h2,h3,h4,h5,h6;
+$font-size:$font-size-h1,$font-size-h2,$font-size-h3,$font-size-h4,$font-size-h5,$font-size-h6;
+@for $i from 1 through 6 {
+	#{nth($headers,$i)} {
+		font-size:nth($font-size,$i);
+		color:$header-color;
+		@if(nth($font-size,$i) == $font-size-h1){font-weight:$light}
+		@else{font-weight:$book}
+	}
+}
+
+h1 {
+	line-height:1.1;
+	letter-spacing:0em;
+}
+h1.light-40sp{
+	font-size:40px;
+}
+h2 {
+	line-height:1.2;
+	letter-spacing:0em;	
+}
+h2.book{
+	font-weight:$book;
+	font-size:30px;
+}
+h3 {
+	line-height:1.3;
+	letter-spacing:0em;
+}
+h4 {
+	line-height:22px;
+	letter-spacing:0.02em;
+	padding:0;
+	margin:10px 0;
+}
+h5{
+	line-height:22px;
+	letter-spacing:0.02em;
+	padding:0;
+	margin:0;
+}
+
+//header tags with background
+.bg-h1{
+	color:$headings-color-dark;
+}
+.bg-h1-40sp{
+	@extend .light-40sp;
+	color:$headings-color-dark;
+}
+.bg-h2{
+	color:$headings-color-dark;
+}
+.bg-h2-book{
+	@extend .book;
+	color:$headings-color-dark;
+}
+.bg-h3{
+	color:$headings-color-dark;
+}
+
+//heading lables
+.heading-label{
+	font-size: 18px;
+  	line-height: 1.3;
+  	color: rgba(10, 9, 9, 0.9);
+  	font-weight: $medium;
+}
+
+//sub-heading
+.sub-heading{
+	font-weight:$book;
+  	font-size: 18px;
+  	line-height: 1.3;
+  	color: rgba(10, 9, 9, 0.9);
+}
+
+//default text 
+.default-text-bold{
+	font-weight: $medium;
+  	font-size: 16px;
+  	line-height: 1.5;
+  	color: rgba(10, 9, 9, 0.9);
+}
+
+.default-text{
+	font-weight:$book;
+  	font-size: 16px;
+  	line-height: 1.5;
+  	letter-spacing: 0.5px;
+  	color: rgba(0, 0, 0, 0.8);
+}
+.meta-text{
+	font-weight:$book;
+  	font-size: 14px;
+  	line-height: 1.6;
+  	color: rgba(0, 0, 0, 0.7);
+}
+.caption{
+	font-size: 12px;
+  	color: #0a0909;
+}
+.small-meta-text{
+	font-family:$book;
+  	font-size: 12px;
+  	line-height: 1.7;
+  	color: rgba(0, 0, 0, 0.6);
+}
+.input-text{
+	font-weight:$book;
+  	font-size: 14px;
+  	color: #000000;
+}
+.label-text{
+	font-weight:$book;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.label-text-small{
+	font-family:$book;
+  	font-size: 12px;
+  	color: rgba(0, 0, 0, 0.4);
+}
+
+//background heading lables
+.bg-heading-label{
+	@extend .heading-label;
+	color:$headings-color-dark;
+}
+//background subheadings
+.bg-sub-heading{
+	@extend .sub-heading;
+	color:$headings-color-dark;
+}
+
+//background default text
+
+.bg-default-text-bold{
+	@extend .default-text-bold;
+	color:$headings-color-dark;
+}
+.bg-default-text{
+	@extend .default-text;
+	color:$headings-color-dark;
+}
+.bg-meta-text{
+	@extend .meta-text;
+	color:$headings-color-dark;
+}
+.bg-caption{
+	@extend .caption;
+	color:$headings-color-dark;
+}
+.bg-small-meta-text{
+	@extend .small-meta-text;
+	color:$headings-color-dark;
+}
+.h1-dark {
+	color:$headings-color-dark;
+}
+
+.h1-inner {
+	font-size:$font-size-h1o;
+	font-weight:$book;
+}
+.h1-inner-bg {
+	@extend .h1-dark;
+	@extend .h1-inner;
+}
+.h2-inner{
+	font-size:22px;
+	font-weight:$book;
+}
+
+
+a {
+	color:$btn-default-color;
+	text-decoration:$link-color-decoration;
+	font-size:($font-size-base - 1);
+	 background-color: transparent;
+	&:hover, &:active {
+	color:darken($btn-default-color, 10%);
+	outline:none;
+	text-decoration:none;
+	}
+}
+button,input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+.dummy_submit {
+position:absolute;
+left:-9999px;
+width:1px;
+height:1px
+}
+
+//Sub Headings 
+.sh-normal{
+	font-size:16px;
+	color:$grey-light;
+	font-weight:$book;
+	line-height:22px;
+	letter-spacing:0.02em;
+}
+.sh-dark{
+	@extend .sh-normal;
+	color:#fff;
+}
+.sh-light{
+	@extend .sh-normal;
+	color:$grey-lighter;
+}
+.sh-small{
+	font-size:14px;
+	color:$grey-light;
+	font-weight:$book;
+	line-height:20px;
+	letter-spacing:0.02em;
+}
+.sh-dark-small{
+	@extend .sh-small;
+	color:#fff;
+}
+.sh-light-small{
+	@extend .sh-small;
+	color:$grey-lighter;
+}
+
+//paragraphs
+.text-normal{
+	font-size:14px;
+	color:$grey-light;
+	font-weight:$light;
+	line-height:20px;
+	letter-spacing:0.02em;
+}
+.text-dark{
+	@extend .text-normal;
+	color:#fff;
+}
+.text-light{
+	@extend .text-normal;
+	color:$grey-lighter;
+}
+.text-small{
+	font-size:13px;
+	color:$grey-light;
+	font-weight:$light;
+	line-height:18px;
+	letter-spacing:0.02em;
+}
+.text-dark-small{
+	@extend .text-small;
+	color:#fff;
+}
+.text-light-small{
+	@extend .text-small;
+	color:$grey-lighter;
+}
+
+//labels
+
+.label-normal{
+	font-size:14px;
+	color:$grey;
+	font-weight:$medium;
+	line-height:18px;
+	letter-spacing:0.02em;
+}
+.label-dark{
+	@extend .label-normal;
+	color:#fff;
+}
+.label-3{
+	font-size:13px;
+	color:$grey-light;
+	font-weight:$light;
+	line-height:18px;
+	letter-spacing:0.02em;
+}
+.inline-block {
+	display:inline-block;
+}
+.sprite_home:before, .stories_descrip:after, .aap_icon {
+	background:url($home-page-sprite);
+}

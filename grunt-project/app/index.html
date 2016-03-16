@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="gruntProjectApp">
+	<head>	
+		<meta charset="utf-8">
+	   <title>Grunt project</title>
+	    <meta name="description" content="">
+	    <meta name="viewport" content="width=device-width">
+	    <link rel="stylesheet" href="http://cfi10.simplicdn.net/frontend/css/font_v2.1454395200.css">
+	    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	    <!-- build:css(.) styles/vendor.css -->
+	    <!-- bower:css -->
+	    <!-- endbower -->
+	    <!-- endbuild -->
+	    <!-- build:css(.tmp) styles/main.css -->
+	   	 	<link rel="stylesheet" href="styles/main.css">
+    	<!-- endbuild -->
+
+	</head>
+	<body ng-app="gruntProjectApp">
+		<!--[if lt IE 7]>
+	      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	    <![endif]-->
+	    <nav class="navbar frs-nav">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand main-menu" href="#">AllCourse</a>
+            </div>
+                          <div class="mid_logo mid_logo_common">
+                  <a href="/" class="logo">
+                    <img src="http://cfs22.simplicdn.net/ice9/new_logo.svgz" alt="">
+                  </a>
+                </div>
+             <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Login</a></li>
+                </ul>
+        </div>
+     </nav> 
+		 <div ng-view=""></div>
+
+		   	<!-- build:js(.) scripts/vendor.js -->
+		    <!-- bower:js -->
+		    <script src="bower_components/angular/angular.js"></script>
+		    <script src="bower_components/angular-animate/angular-animate.js"></script>
+		    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		    <script src="bower_components/angular-route/angular-route.js"></script>
+		    <!-- endbower -->
+		    <!-- endbuild -->
+
+	        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+	        <script src="scripts/app.js"></script>
+	        <script src="scripts/controllers/main.js"></script>
+	        <!-- endbuild -->
+
+	</body>
+</html>
