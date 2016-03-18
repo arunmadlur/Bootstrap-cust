@@ -158,6 +158,20 @@ h5{
 	@extend .small-meta-text;
 	color:$headings-color-dark;
 }
+
+//buttons sizes
+.btn-big{
+    padding: 10px 24px;
+    height: 42px;
+    font-size: 16px;
+    line-height: 1.3333333;
+    border-radius: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
 .h1-dark {
 	color:$headings-color-dark;
 }
@@ -179,14 +193,25 @@ h5{
 a {
 	color:$btn-default-color;
 	text-decoration:$link-color-decoration;
-	font-size:($font-size-base - 1);
+	font-size:($font-size-base + 2);
 	 background-color: transparent;
+	 font-weight: $book;
 	&:hover, &:active {
 	color:darken($btn-default-color, 10%);
 	outline:none;
 	text-decoration:none;
 	}
 }
+.link-14sp{
+	@extend a;
+	font-size:$font-size-base;
+}
+.link-grey{
+	@extend a;
+	font-size:$font-size-base;
+	color:rgba(0, 0, 0, 0.5);
+}
+
 button,input[type="submit"]{-webkit-appearance:button;cursor:pointer}
 .dummy_submit {
 position:absolute;

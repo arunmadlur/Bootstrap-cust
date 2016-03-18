@@ -9,8 +9,8 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #f5ab40 !default; // $primary-color
-$brand-success:         #00a7dc !default; // $secondary-color
+$brand-primary:         #f8ab33 !default; // $primary-color
+$brand-success:         #00a6df !default; // $secondary-color
 
 //== Scaffolding
 //
@@ -126,7 +126,7 @@ $table-border-color:            #ddd !default;
 
 $btn-font-weight:                500 !default;
 
-$btn-default-color:              #00a7dc !default;
+$btn-default-color:              #00a6df !default;
 $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
@@ -142,7 +142,7 @@ $btn-success-border:             darken($btn-success-bg, 5%) !default;
 $btn-link-disabled-color:        $gray-light !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius-base:         $border-radius-base !default;
+$btn-border-radius-base:         2px !default;
 
 
 //== Forms

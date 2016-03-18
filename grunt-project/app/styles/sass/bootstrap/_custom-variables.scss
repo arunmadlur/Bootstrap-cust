@@ -1,7 +1,7 @@
 //for each ice9 buttons, define text, background and border color
 
 //primary buttons
-$primary-color:#f5ab40;
+$primary-color:#f8ab33;
 $secondary-color:#00a7dc;
 $ternary-color:#0080a7;
 
@@ -23,6 +23,18 @@ $grey-lighter:#a1abb2;
 //material forms colors
 $check-color:#5ac669;
 $error-color:#ff0000;
+
+//button btn-lg custom
+$btn-font-size-lg:16px;
+$btn-padding-large-vertical:    10px !default;
+$btn-padding-large-horizontal:  20px !default;
+
+$btn-padding-small-vertical:    7px !default;
+$btn-padding-small-horizontal:  10px !default;
+
+
+$btn-primary-hover:#eb9e26;
+
 
 //sprite images variable
 $common-path:'http://cfs9.simplicdn.net/frontend/images';

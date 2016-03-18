@@ -285,7 +285,7 @@ module.exports = function(grunt) {
 				tasks: ['newer:jshint:all']
 			},
 			compass: {
-				files: ['<%= caldon.app %>/styles/{,*/}*.scss','<%= caldon.app %>/styles/sass/{,*/}*.scss'],
+				files: ['<%= caldon.app %>/styles/{,*/}*.scss','<%= caldon.app %>/styles/sass/{,*/}*.scss','<%= caldon.app %>/styles/sass/{,*/}*/{,*/}*.scss'],
 				tasks: ['compass:server', 'autoprefixer']
 			},
 			gruntfile: {
