@@ -78,10 +78,9 @@ line-height:17px
 
 
 input[type=text]:disabled{
-  color: $grey-lighter;
   border-bottom: 1px dotted $border-color;
   cursor: default;
-  font-weight:$light;
+  @extend .disabled-text;
   + .floating-label.active{
     top:-15px;
     font-size:11px;
@@ -96,12 +95,10 @@ input[type=text]:disabled{
 }
 .floating-label{
   position:absolute;
-  top:12px;left:0;
+  top:6px;left:0;
   transition: .2s ease all;
   pointer-events: none;
-  color:$grey-lighter;
-  font-size:13px;
-  font-weight:$light;
+  @extend .label-text;
 }
 .floating-label_border{
   border-bottom:2px solid $check-color;
@@ -168,7 +165,7 @@ input[type=checkbox] {
  }
 .form-checkbox {
   label {
-    @extend .label-3;
+    @extend .input-text;
     cursor: $cursor;
     padding-left: 0px; 
     
@@ -291,7 +288,7 @@ input[type=checkbox]:checked + .checkbox-material .check:before {
 }
 .form-radio{
   label{
-    @extend .label-3;
+    @extend .input-text;
    cursor: pointer;
    padding-left: 31px;
    position: relative;

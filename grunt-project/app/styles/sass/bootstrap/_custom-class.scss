@@ -1,5 +1,3 @@
-
-
 $headers:h1,h2,h3,h4,h5,h6;
 $font-size:$font-size-h1,$font-size-h2,$font-size-h3,$font-size-h4,$font-size-h5,$font-size-h6;
 @for $i from 1 through 6 {
@@ -124,7 +122,16 @@ h5{
   	font-size: 12px;
   	color: rgba(0, 0, 0, 0.4);
 }
-
+.error{
+	font-weight:$book;
+  	font-size: 12px;
+  	color: #ff0000;
+}
+.disabled-text{
+	font-weight:$book;
+  	font-size: 14px;
+  	color: rgba(0, 0, 0, 0.3);
+}
 //background heading lables
 .bg-heading-label{
 	@extend .heading-label;
@@ -160,35 +167,11 @@ h5{
 }
 
 //buttons sizes
-.btn-big{
-    padding: 10px 24px;
-    height: 42px;
-    font-size: 16px;
-    line-height: 1.3333333;
-    border-radius: 2px;
-    text-transform: uppercase;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+.btn-flat{
+	  box-shadow:none !important;
 }
 
-
-
-.h1-dark {
-	color:$headings-color-dark;
-}
-
-.h1-inner {
-	font-size:$font-size-h1o;
-	font-weight:$book;
-}
-.h1-inner-bg {
-	@extend .h1-dark;
-	@extend .h1-inner;
-}
-.h2-inner{
-	font-size:22px;
-	font-weight:$book;
-}
-
+//link tags
 
 a {
 	color:$btn-default-color;
@@ -220,93 +203,7 @@ width:1px;
 height:1px
 }
 
-//Sub Headings 
-.sh-normal{
-	font-size:16px;
-	color:$grey-light;
-	font-weight:$book;
-	line-height:22px;
-	letter-spacing:0.02em;
-}
-.sh-dark{
-	@extend .sh-normal;
-	color:#fff;
-}
-.sh-light{
-	@extend .sh-normal;
-	color:$grey-lighter;
-}
-.sh-small{
-	font-size:14px;
-	color:$grey-light;
-	font-weight:$book;
-	line-height:20px;
-	letter-spacing:0.02em;
-}
-.sh-dark-small{
-	@extend .sh-small;
-	color:#fff;
-}
-.sh-light-small{
-	@extend .sh-small;
-	color:$grey-lighter;
-}
-
-//paragraphs
-.text-normal{
-	font-size:14px;
-	color:$grey-light;
-	font-weight:$light;
-	line-height:20px;
-	letter-spacing:0.02em;
-}
-.text-dark{
-	@extend .text-normal;
-	color:#fff;
-}
-.text-light{
-	@extend .text-normal;
-	color:$grey-lighter;
-}
-.text-small{
-	font-size:13px;
-	color:$grey-light;
-	font-weight:$light;
-	line-height:18px;
-	letter-spacing:0.02em;
-}
-.text-dark-small{
-	@extend .text-small;
-	color:#fff;
-}
-.text-light-small{
-	@extend .text-small;
-	color:$grey-lighter;
-}
-
 //labels
-
-.label-normal{
-	font-size:14px;
-	color:$grey;
-	font-weight:$medium;
-	line-height:18px;
-	letter-spacing:0.02em;
-}
-.label-dark{
-	@extend .label-normal;
-	color:#fff;
-}
-.label-3{
-	font-size:13px;
-	color:$grey-light;
-	font-weight:$light;
-	line-height:18px;
-	letter-spacing:0.02em;
-}
 .inline-block {
 	display:inline-block;
-}
-.sprite_home:before, .stories_descrip:after, .aap_icon {
-	background:url($home-page-sprite);
 }

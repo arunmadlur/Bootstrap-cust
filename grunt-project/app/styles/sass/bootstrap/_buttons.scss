@@ -77,7 +77,7 @@
 }
 
 .btn:active::after {
-				background-size: 1000% 1000%;
+				background-size: 10000% 10000%;
 				transition: 0.25s background-size ease-out, 0.15s background-color ease-in;
 				background-color: #DBDBDB;
 				box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 3px rgba(0,0,0,0.23);
