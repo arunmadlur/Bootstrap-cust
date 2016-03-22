@@ -20,9 +20,9 @@ h2 {
 	line-height:1.2;
 	letter-spacing:0em;	
 }
-h2.book{
-	font-weight:$book;
-	font-size:30px;
+h2.light{
+	font-weight:$light;
+	font-size:34px;
 }
 h3 {
 	line-height:1.3;
@@ -52,8 +52,8 @@ h5{
 .bg-h2{
 	color:$headings-color-dark;
 }
-.bg-h2-book{
-	@extend .book;
+.bg-h2-light{
+	@extend .light;
 	color:$headings-color-dark;
 }
 .bg-h3{
@@ -140,7 +140,7 @@ h5{
 //background subheadings
 .bg-sub-heading{
 	@extend .sub-heading;
-	color:$headings-color-dark;
+	color: rgba(255, 255, 255, 0.9);
 }
 
 //background default text
@@ -151,19 +151,19 @@ h5{
 }
 .bg-default-text{
 	@extend .default-text;
-	color:$headings-color-dark;
+	color: rgba(255, 255, 255, 0.9);
 }
 .bg-meta-text{
 	@extend .meta-text;
-	color:$headings-color-dark;
+	color: rgba(255, 255, 255, 0.9);
 }
 .bg-caption{
 	@extend .caption;
-	color:$headings-color-dark;
+	 color: rgba(253, 253, 253, 0.9);
 }
 .bg-small-meta-text{
 	@extend .small-meta-text;
-	color:$headings-color-dark;
+	 color: rgba(255, 255, 255, 0.9);
 }
 
 //buttons sizes

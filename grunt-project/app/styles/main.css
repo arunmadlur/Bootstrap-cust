@@ -1552,9 +1552,9 @@ h2 {
 }
 
 /* line 23, sass/bootstrap/_custom-class.scss */
-h2.book, h2.bg-h2-book {
-  font-weight: 400;
-  font-size: 30px;
+h2.light, h2.bg-h2-light {
+  font-weight: 300;
+  font-size: 34px;
 }
 
 /* line 27, sass/bootstrap/_custom-class.scss */
@@ -1595,7 +1595,7 @@ h5 {
 }
 
 /* line 55, sass/bootstrap/_custom-class.scss */
-.bg-h2-book {
+.bg-h2-light {
   color: #ffffff;
 }
 
@@ -1629,7 +1629,7 @@ h5 {
 }
 
 /* line 87, sass/bootstrap/_custom-class.scss */
-.default-text, .bg-default-text {
+.default-text, .bg-default-text, .menu-ul li a, .menu-ul li .link-14sp, .menu-ul li .link-grey, .menu-ul li .category-item, .menu-ul li input {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -1701,7 +1701,7 @@ h5 {
 
 /* line 141, sass/bootstrap/_custom-class.scss */
 .bg-sub-heading {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* line 148, sass/bootstrap/_custom-class.scss */
@@ -1710,23 +1710,23 @@ h5 {
 }
 
 /* line 152, sass/bootstrap/_custom-class.scss */
-.bg-default-text {
-  color: #ffffff;
+.bg-default-text, .menu-ul li a, .menu-ul li .link-14sp, .menu-ul li .link-grey, .menu-ul li .category-item, .menu-ul li input {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* line 156, sass/bootstrap/_custom-class.scss */
 .bg-meta-text {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* line 160, sass/bootstrap/_custom-class.scss */
 .bg-caption {
-  color: #ffffff;
+  color: rgba(253, 253, 253, 0.9);
 }
 
 /* line 164, sass/bootstrap/_custom-class.scss */
 .bg-small-meta-text {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* line 170, sass/bootstrap/_custom-class.scss */
@@ -2970,158 +2970,766 @@ ol ol {
   margin-bottom: 15px;
 }
 
-/* line 11, sass/bootstrap/_testing.scss */
-.primary-color {
-  color: #f8ab33;
+/* line 11, sass/bootstrap/_navbar.scss */
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+/* line 14, sass/bootstrap/mixins/_clearfix.scss */
+.navbar:before, .navbar:after {
+  content: " ";
+  display: table;
+}
+/* line 19, sass/bootstrap/mixins/_clearfix.scss */
+.navbar:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  /* line 11, sass/bootstrap/_navbar.scss */
+  .navbar {
+    border-radius: 3px;
+  }
 }
 
-/* line 14, sass/bootstrap/_testing.scss */
-.secondary-color {
-  color: #00a7dc;
+/* line 14, sass/bootstrap/mixins/_clearfix.scss */
+.navbar-header:before, .navbar-header:after {
+  content: " ";
+  display: table;
+}
+/* line 19, sass/bootstrap/mixins/_clearfix.scss */
+.navbar-header:after {
+  clear: both;
+}
+@media (min-width: 768px) {
+  /* line 31, sass/bootstrap/_navbar.scss */
+  .navbar-header {
+    float: left;
+  }
 }
 
-/* line 17, sass/bootstrap/_testing.scss */
-.ternary-color {
-  color: #0080a7;
+/* line 50, sass/bootstrap/_navbar.scss */
+.navbar-collapse {
+  overflow-x: visible;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-top: 1px solid transparent;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  -webkit-overflow-scrolling: touch;
+}
+/* line 14, sass/bootstrap/mixins/_clearfix.scss */
+.navbar-collapse:before, .navbar-collapse:after {
+  content: " ";
+  display: table;
+}
+/* line 19, sass/bootstrap/mixins/_clearfix.scss */
+.navbar-collapse:after {
+  clear: both;
+}
+/* line 59, sass/bootstrap/_navbar.scss */
+.navbar-collapse.in {
+  overflow-y: auto;
+}
+@media (min-width: 768px) {
+  /* line 50, sass/bootstrap/_navbar.scss */
+  .navbar-collapse {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+  }
+  /* line 68, sass/bootstrap/_navbar.scss */
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  /* line 75, sass/bootstrap/_navbar.scss */
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+  /* line 81, sass/bootstrap/_navbar.scss */
+  .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-/* line 20, sass/bootstrap/_testing.scss */
-.background-light {
-  color: #efefef;
+/* line 92, sass/bootstrap/_navbar.scss */
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-bottom .navbar-collapse {
+  max-height: 340px;
+}
+@media (max-device-width: 480px) and (orientation: landscape) {
+  /* line 92, sass/bootstrap/_navbar.scss */
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    max-height: 200px;
+  }
 }
 
-/* line 23, sass/bootstrap/_testing.scss */
-.border-color {
-  color: rgba(0, 0, 0, 0.2);
+/* line 108, sass/bootstrap/_navbar.scss */
+.container > .navbar-header,
+.container > .navbar-collapse,
+.container-fluid > .navbar-header,
+.container-fluid > .navbar-collapse {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+@media (min-width: 768px) {
+  /* line 108, sass/bootstrap/_navbar.scss */
+  .container > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-header,
+  .container-fluid > .navbar-collapse {
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
-/* line 26, sass/bootstrap/_testing.scss */
-.border-color-light {
-  color: #edeff0;
+/* line 128, sass/bootstrap/_navbar.scss */
+.navbar-static-top {
+  z-index: 1000;
+  border-width: 0 0 1px;
+}
+@media (min-width: 768px) {
+  /* line 128, sass/bootstrap/_navbar.scss */
+  .navbar-static-top {
+    border-radius: 0;
+  }
 }
 
-/* line 29, sass/bootstrap/_testing.scss */
-.heading-color {
-  color: #3b444f;
+/* line 138, sass/bootstrap/_navbar.scss */
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+@media (min-width: 768px) {
+  /* line 138, sass/bootstrap/_navbar.scss */
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    border-radius: 0;
+  }
 }
 
-/* line 32, sass/bootstrap/_testing.scss */
-.default-color {
-  color: #5e676d;
+/* line 150, sass/bootstrap/_navbar.scss */
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
 }
 
-/* line 35, sass/bootstrap/_testing.scss */
-.lighter-color {
-  color: #a1abb2;
+/* line 154, sass/bootstrap/_navbar.scss */
+.navbar-fixed-bottom {
+  bottom: 0;
+  margin-bottom: 0;
+  border-width: 1px 0 0;
 }
 
-/* line 38, sass/bootstrap/_testing.scss */
-.check-color {
-  color: #00a6df;
-}
-
-/* line 41, sass/bootstrap/_testing.scss */
-.error-color {
-  color: #ff0000;
-}
-
-/* line 45, sass/bootstrap/_testing.scss */
-.home-sprite {
-  background: url("http://cfs9.simplicdn.net/frontend/images/home-page_sprite_v1.png");
-  width: 155px;
+/* line 163, sass/bootstrap/_navbar.scss */
+.navbar-brand {
+  float: left;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
   height: 50px;
-  background-position: -10px -9px;
-  display: inline-block;
+}
+/* line 170, sass/bootstrap/_navbar.scss */
+.navbar-brand:hover, .navbar-brand:focus {
+  text-decoration: none;
+}
+/* line 175, sass/bootstrap/_navbar.scss */
+.navbar-brand > img {
+  display: block;
+}
+@media (min-width: 768px) {
+  /* line 180, sass/bootstrap/_navbar.scss */
+  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+  }
 }
 
-/* line 52, sass/bootstrap/_testing.scss */
-.media-img {
-  background: url("http://cfs9.simplicdn.net/frontend/images/content_sprite_v6.png");
-  background-position: -15px -236px;
-  height: 50px;
-  width: 191px;
-  display: inline-block;
+/* line 193, sass/bootstrap/_navbar.scss */
+.navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
 }
-
-/* line 60, sass/bootstrap/_testing.scss */
-.footer-icon {
-  background: url("http://cfs9.simplicdn.net/frontend/images/header_sprite_v10.png") #000;
-  background-position: -62px -628px;
-  height: 22px;
+/* line 206, sass/bootstrap/_navbar.scss */
+.navbar-toggle:focus {
+  outline: 0;
+}
+/* line 211, sass/bootstrap/_navbar.scss */
+.navbar-toggle .icon-bar {
+  display: block;
   width: 22px;
-  display: inline-block;
+  height: 2px;
+  border-radius: 1px;
+}
+/* line 217, sass/bootstrap/_navbar.scss */
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  /* line 193, sass/bootstrap/_navbar.scss */
+  .navbar-toggle {
+    display: none;
+  }
 }
 
-/* line 67, sass/bootstrap/_testing.scss */
-.course-icon {
-  background: url("http://cfs9.simplicdn.net/frontend/images/course_sprite_v8.png");
-  background-position: -2px -74px;
-  width: 34px;
-  height: 32px;
-  display: inline-block;
+/* line 232, sass/bootstrap/_navbar.scss */
+.navbar-nav {
+  margin: 7.5px -15px;
+}
+/* line 235, sass/bootstrap/_navbar.scss */
+.navbar-nav > li > a, .navbar-nav > li > .link-14sp, .navbar-nav > li > .link-grey {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+@media (max-width: 767px) {
+  /* line 243, sass/bootstrap/_navbar.scss */
+  .navbar-nav .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  /* line 251, sass/bootstrap/_navbar.scss */
+  .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu > li > .link-14sp, .navbar-nav .open .dropdown-menu > li > .link-grey,
+  .navbar-nav .open .dropdown-menu .dropdown-header {
+    padding: 5px 15px 5px 25px;
+  }
+  /* line 255, sass/bootstrap/_navbar.scss */
+  .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu > li > .link-14sp, .navbar-nav .open .dropdown-menu > li > .link-grey {
+    line-height: 20px;
+  }
+  /* line 257, sass/bootstrap/_navbar.scss */
+  .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > .link-14sp:hover, .navbar-nav .open .dropdown-menu > li > .link-grey:hover, .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-nav .open .dropdown-menu > li > .link-14sp:focus, .navbar-nav .open .dropdown-menu > li > .link-grey:focus {
+    background-image: none;
+  }
+}
+@media (min-width: 768px) {
+  /* line 232, sass/bootstrap/_navbar.scss */
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  /* line 270, sass/bootstrap/_navbar.scss */
+  .navbar-nav > li {
+    float: left;
+  }
+  /* line 272, sass/bootstrap/_navbar.scss */
+  .navbar-nav > li > a, .navbar-nav > li > .link-14sp, .navbar-nav > li > .link-grey {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }
 
-/* line 74, sass/bootstrap/_testing.scss */
-.course-icon2 {
-  background: url("http://cfs9.simplicdn.net/frontend/images/new-couuse-sprite.png");
-  background-position: -391px -9px;
+/* line 327, sass/bootstrap/_navbar.scss */
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* line 332, sass/bootstrap/_navbar.scss */
+.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
+  margin-bottom: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 343, sass/bootstrap/_navbar.scss */
+.navbar-btn {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+/* line 346, sass/bootstrap/_navbar.scss */
+.navbar-btn.btn-sm {
+  margin-top: 3.5px;
+  margin-bottom: 3.5px;
+}
+/* line 349, sass/bootstrap/_navbar.scss */
+.navbar-btn.btn-xs {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+/* line 359, sass/bootstrap/_navbar.scss */
+.navbar-text {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  /* line 359, sass/bootstrap/_navbar.scss */
+  .navbar-text {
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 379, sass/bootstrap/_navbar.scss */
+  .navbar-left {
+    float: left !important;
+  }
+
+  /* line 382, sass/bootstrap/_navbar.scss */
+  .navbar-right {
+    float: right !important;
+    margin-right: -15px;
+  }
+  /* line 386, sass/bootstrap/_navbar.scss */
+  .navbar-right ~ .navbar-right {
+    margin-right: 0;
+  }
+}
+/* line 397, sass/bootstrap/_navbar.scss */
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+/* line 401, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-brand {
+  color: #777;
+}
+/* line 403, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+/* line 410, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-text {
+  color: #777;
+}
+/* line 415, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > .link-14sp, .navbar-default .navbar-nav > li > .link-grey {
+  color: #777;
+}
+/* line 418, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > .link-14sp:hover, .navbar-default .navbar-nav > li > .link-grey:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > .link-14sp:focus, .navbar-default .navbar-nav > li > .link-grey:focus {
+  color: #333;
+  background-color: transparent;
+}
+/* line 425, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > .link-14sp, .navbar-default .navbar-nav > .active > .link-grey, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > .link-14sp:hover, .navbar-default .navbar-nav > .active > .link-grey:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > .link-14sp:focus, .navbar-default .navbar-nav > .active > .link-grey:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+/* line 433, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > .link-14sp, .navbar-default .navbar-nav > .disabled > .link-grey, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > .link-14sp:hover, .navbar-default .navbar-nav > .disabled > .link-grey:hover, .navbar-default .navbar-nav > .disabled > a:focus, .navbar-default .navbar-nav > .disabled > .link-14sp:focus, .navbar-default .navbar-nav > .disabled > .link-grey:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+/* line 442, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-toggle {
+  border-color: #ddd;
+}
+/* line 444, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #ddd;
+}
+/* line 448, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+/* line 453, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #e7e7e7;
+}
+/* line 462, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > .link-14sp, .navbar-default .navbar-nav > .open > .link-grey, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > .link-14sp:hover, .navbar-default .navbar-nav > .open > .link-grey:hover, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > .link-14sp:focus, .navbar-default .navbar-nav > .open > .link-grey:focus {
+  background-color: #e7e7e7;
+  color: #555;
+}
+@media (max-width: 767px) {
+  /* line 473, sass/bootstrap/_navbar.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a, .navbar-default .navbar-nav .open .dropdown-menu > li > .link-14sp, .navbar-default .navbar-nav .open .dropdown-menu > li > .link-grey {
+    color: #777;
+  }
+  /* line 475, sass/bootstrap/_navbar.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > .link-14sp:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > .link-grey:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > .link-14sp:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > .link-grey:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  /* line 482, sass/bootstrap/_navbar.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > .link-14sp, .navbar-default .navbar-nav .open .dropdown-menu > .active > .link-grey, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > .link-14sp:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > .link-grey:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > .active > .link-14sp:focus, .navbar-default .navbar-nav .open .dropdown-menu > .active > .link-grey:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  /* line 490, sass/bootstrap/_navbar.scss */
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > .link-14sp, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > .link-grey, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > .link-14sp:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > .link-grey:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > .link-14sp:focus, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > .link-grey:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+/* line 506, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-link {
+  color: #777;
+}
+/* line 508, sass/bootstrap/_navbar.scss */
+.navbar-default .navbar-link:hover {
+  color: #333;
+}
+/* line 513, sass/bootstrap/_navbar.scss */
+.navbar-default .btn-link {
+  color: #777;
+}
+/* line 515, sass/bootstrap/_navbar.scss */
+.navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
+  color: #333;
+}
+/* line 521, sass/bootstrap/_navbar.scss */
+.navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus {
+  color: #ccc;
+}
+
+/* line 531, sass/bootstrap/_navbar.scss */
+.navbar-inverse {
+  background-color: #222;
+  border-color: #090909;
+}
+/* line 535, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-brand {
+  color: #9d9d9d;
+}
+/* line 537, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+  color: #fff;
+  background-color: transparent;
+}
+/* line 544, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-text {
+  color: #9d9d9d;
+}
+/* line 549, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > .link-14sp, .navbar-inverse .navbar-nav > li > .link-grey {
+  color: #9d9d9d;
+}
+/* line 552, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > .link-14sp:hover, .navbar-inverse .navbar-nav > li > .link-grey:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > .link-14sp:focus, .navbar-inverse .navbar-nav > li > .link-grey:focus {
+  color: #fff;
+  background-color: transparent;
+}
+/* line 559, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > .link-14sp, .navbar-inverse .navbar-nav > .active > .link-grey, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > .link-14sp:hover, .navbar-inverse .navbar-nav > .active > .link-grey:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > .link-14sp:focus, .navbar-inverse .navbar-nav > .active > .link-grey:focus {
+  color: #fff;
+  background-color: #090909;
+}
+/* line 567, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-nav > .disabled > a, .navbar-inverse .navbar-nav > .disabled > .link-14sp, .navbar-inverse .navbar-nav > .disabled > .link-grey, .navbar-inverse .navbar-nav > .disabled > a:hover, .navbar-inverse .navbar-nav > .disabled > .link-14sp:hover, .navbar-inverse .navbar-nav > .disabled > .link-grey:hover, .navbar-inverse .navbar-nav > .disabled > a:focus, .navbar-inverse .navbar-nav > .disabled > .link-14sp:focus, .navbar-inverse .navbar-nav > .disabled > .link-grey:focus {
+  color: #444;
+  background-color: transparent;
+}
+/* line 577, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-toggle {
+  border-color: #333;
+}
+/* line 579, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: #333;
+}
+/* line 583, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+/* line 588, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #101010;
+}
+/* line 596, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > .link-14sp, .navbar-inverse .navbar-nav > .open > .link-grey, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > .link-14sp:hover, .navbar-inverse .navbar-nav > .open > .link-grey:hover, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > .link-14sp:focus, .navbar-inverse .navbar-nav > .open > .link-grey:focus {
+  background-color: #090909;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  /* line 607, sass/bootstrap/_navbar.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
+    border-color: #090909;
+  }
+  /* line 610, sass/bootstrap/_navbar.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+    background-color: #090909;
+  }
+  /* line 613, sass/bootstrap/_navbar.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, .navbar-inverse .navbar-nav .open .dropdown-menu > li > .link-14sp, .navbar-inverse .navbar-nav .open .dropdown-menu > li > .link-grey {
+    color: #9d9d9d;
+  }
+  /* line 615, sass/bootstrap/_navbar.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > .link-14sp:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > .link-grey:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > li > .link-14sp:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > li > .link-grey:focus {
+    color: #fff;
+    background-color: transparent;
+  }
+  /* line 622, sass/bootstrap/_navbar.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > .link-14sp, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > .link-grey, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > .link-14sp:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > .link-grey:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > .link-14sp:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > .link-grey:focus {
+    color: #fff;
+    background-color: #090909;
+  }
+  /* line 630, sass/bootstrap/_navbar.scss */
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > .link-14sp, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > .link-grey, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > .link-14sp:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > .link-grey:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > .link-14sp:focus, .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > .link-grey:focus {
+    color: #444;
+    background-color: transparent;
+  }
+}
+/* line 641, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-link {
+  color: #9d9d9d;
+}
+/* line 643, sass/bootstrap/_navbar.scss */
+.navbar-inverse .navbar-link:hover {
+  color: #fff;
+}
+/* line 648, sass/bootstrap/_navbar.scss */
+.navbar-inverse .btn-link {
+  color: #9d9d9d;
+}
+/* line 650, sass/bootstrap/_navbar.scss */
+.navbar-inverse .btn-link:hover, .navbar-inverse .btn-link:focus {
+  color: #fff;
+}
+/* line 656, sass/bootstrap/_navbar.scss */
+.navbar-inverse .btn-link[disabled]:hover, .navbar-inverse .btn-link[disabled]:focus, fieldset[disabled] .navbar-inverse .btn-link:hover, fieldset[disabled] .navbar-inverse .btn-link:focus {
+  color: #444;
+}
+
+/* line 5, sass/caldon-style/_caldon-style.scss */
+.wrap-text {
+  text-align: center;
+  height: 180px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* line 15, sass/caldon-style/_caldon-style.scss */
+.sub-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 22, sass/caldon-style/_caldon-style.scss */
+.menu-div {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 70px;
+}
+/* line 28, sass/caldon-style/_caldon-style.scss */
+.menu-div .menu-main-list, .menu-div .container {
+  height: inherit;
+}
+
+/* line 32, sass/caldon-style/_caldon-style.scss */
+.menu-main-list:before, .menu-list {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 36, sass/caldon-style/_caldon-style.scss */
+.menu-list {
+  width: 99%;
+}
+
+/* line 39, sass/caldon-style/_caldon-style.scss */
+.menu-main-list:before {
+  content: "";
+  height: 100%;
+}
+
+/* line 43, sass/caldon-style/_caldon-style.scss */
+.menu-ul {
+  width: 100%;
+}
+/* line 45, sass/caldon-style/_caldon-style.scss */
+.menu-ul li {
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* line 54, sass/caldon-style/_caldon-style.scss */
+.menu-ul li .select_box {
+  margin-bottom: 0;
+  width: 250px;
+  border-right: 2px solid #979797;
+  border-left: 2px solid #979797;
+  padding: 0 22px;
+}
+
+/* line 62, sass/caldon-style/_caldon-style.scss */
+.menu-ul li .category-item {
+  background: transparent;
+  border-bottom: 0;
+}
+/* line 65, sass/caldon-style/_caldon-style.scss */
+.menu-ul li .category-item option, .menu-ul li .category-item optgroup {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 71, sass/caldon-style/_caldon-style.scss */
+.menu-ul li a.home-item:before, .menu-ul li .home-item.link-14sp:before, .menu-ul li .home-item.link-grey:before {
+  background: url("../images/sprite.png") no-repeat;
+  background-position: -154px -22px;
   width: 20px;
-  height: 22px;
+  height: 20px;
+  content: "";
   display: inline-block;
+  vertical-align: -25%;
 }
-
-/* line 81, sass/bootstrap/_testing.scss */
-.course-list {
-  background: url("http://cfs9.simplicdn.net/frontend/images/course_list_sprite_v2.png");
-  background-position: -94px -131px;
-  width: 14px;
-  height: 17px;
-  display: inline-block;
+/* line 81, sass/caldon-style/_caldon-style.scss */
+.menu-ul li a.popular-item, .menu-ul li .popular-item.link-14sp, .menu-ul li .popular-item.link-grey {
+  padding: 0 30px;
 }
-
-/* line 88, sass/bootstrap/_testing.scss */
-.frs {
-  background: url("http://cfs9.simplicdn.net/frontend/images/free-resources_sprite_imgae.png");
-  background-position: -183px -96px;
-  width: 15px;
-  height: 15px;
-  display: inline-block;
-}
-
-/* line 95, sass/bootstrap/_testing.scss */
-.about-page {
-  background: url("http://cfs9.simplicdn.net/frontend/images/about-sprite.png");
-  background-position: -3px -4px;
-  width: 69px;
-  height: 68px;
-  display: inline-block;
-}
-
-/* line 102, sass/bootstrap/_testing.scss */
-.media-page {
-  background: url("http://cfs9.simplicdn.net/frontend/images/media_sprite_v5.jpg");
-  background-position: 0px -1000px;
+/* line 84, sass/caldon-style/_caldon-style.scss */
+.menu-ul li .search-item {
+  position: relative;
   width: 150px;
-  height: 45px;
+}
+/* line 87, sass/caldon-style/_caldon-style.scss */
+.menu-ul li .search-item input {
+  background: transparent;
+  border: 0;
+}
+/* line 91, sass/caldon-style/_caldon-style.scss */
+.menu-ul li .search-item .search-icon {
+  position: absolute;
+  top: 5px;
+  left: -30px;
+}
+/* line 95, sass/caldon-style/_caldon-style.scss */
+.menu-ul li .search-item .search-icon:before {
+  background: url("../images/sprite.png") no-repeat;
+  background-position: -198px -22px;
+  width: 20px;
+  height: 20px;
+  content: "";
+  display: inline-block;
+  vertical-align: -25%;
+}
+
+/* line 108, sass/caldon-style/_caldon-style.scss */
+.more-link {
+  margin: 30px 0;
   display: inline-block;
 }
 
-/* line 109, sass/bootstrap/_testing.scss */
-.affiliate-page {
-  background: url("http://cfs9.simplicdn.net/frontend/images/affiliate_sprite.png");
-  background-position: -170px -133px;
-  width: 125px;
-  height: 100px;
-  display: inline-block;
+/* line 112, sass/caldon-style/_caldon-style.scss */
+.card-main {
+  position: relative;
+  overflow: hidden;
+  height: 315px;
 }
 
-/* line 116, sass/bootstrap/_testing.scss */
-.atp-page {
-  background: url("http://cfs9.simplicdn.net/frontend/images/atp_sprite.png");
-  background-position: -196px -5px;
-  width: 83px;
-  height: 83px;
+/* line 120, sass/caldon-style/_caldon-style.scss */
+.card-list li.card {
+  height: 315px;
   display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+/* line 125, sass/caldon-style/_caldon-style.scss */
+.card-list li.card .card_wrapper {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 2px;
+  width: 360px;
+  height: 308px;
+  margin: 0 20px;
+  display: block;
+}
+
+/* line 137, sass/caldon-style/_caldon-style.scss */
+.card_img {
+  width: 360px;
+  height: 220px;
+  position: relative;
+}
+/* line 141, sass/caldon-style/_caldon-style.scss */
+.card_img img {
+  width: 360px;
+  height: 220px;
+  border-radius: 2px 2px 0 0;
+}
+
+/* line 148, sass/caldon-style/_caldon-style.scss */
+.card .card-caption {
+  padding: 20px 20px;
+}
+/* line 150, sass/caldon-style/_caldon-style.scss */
+.card .card-caption p {
+  margin: 0;
+}
+
+/* line 154, sass/caldon-style/_caldon-style.scss */
+.views {
+  height: 19px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  color: #ffffff;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+/* line 164, sass/caldon-style/_caldon-style.scss */
+.like {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 16px;
+  height: 14px;
+  background-image: url("../images/sprite.png");
+  background-position: -241px -25px;
+}
+
+/* line 173, sass/caldon-style/_caldon-style.scss */
+.card_arrows {
+  width: 22px;
+  height: 36px;
+  background: url("../images/sprite.png");
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 150px;
+}
+
+/* line 182, sass/caldon-style/_caldon-style.scss */
+.prev_arrow {
+  left: -26px;
+  background-position: -177px -76px;
+  transform: rotate(180deg);
+}
+
+/* line 187, sass/caldon-style/_caldon-style.scss */
+.next_arrow {
+  right: -26px;
+  background-position: -177px -76px;
 }
 
 /* line 6, main.scss */
@@ -3143,19 +3751,23 @@ body {
 /* line 20, main.scss */
 .frs-nav {
   z-index: 1;
+  margin-bottom: 0;
+  border: 0;
+  margin: 10px 0;
 }
 
-/* line 23, main.scss */
+/* line 26, main.scss */
 .main-menu {
   font-size: 14px;
   line-height: 1.1;
   color: #ffffff;
+  font-weight: 400;
 }
 
-/* line 28, main.scss */
+/* line 32, main.scss */
 .main-menu:before {
-  background: url(http://cfi10.simplicdn.net/frontend/images/home-page_sprite_v3.png) no-repeat;
-  background-position: -462px -103px;
+  background: url("../images/sprite.png") no-repeat;
+  background-position: -21px -22px;
   width: 22px;
   height: 22px;
   display: inline-block;
@@ -3164,7 +3776,7 @@ body {
   margin-right: 12px;
 }
 
-/* line 39, main.scss */
+/* line 43, main.scss */
 .mid_logo {
   position: absolute;
   width: 146px;
@@ -3176,25 +3788,53 @@ body {
   z-index: 2;
 }
 
-/* line 49, main.scss */
+/* line 53, main.scss */
 .logo {
   float: left;
   display: inline-block;
   width: 146px;
   height: 39px;
-  margin: 14px 0;
+  margin: 10px 0;
 }
 
-/* line 56, main.scss */
+/* line 60, main.scss */
+.login-span {
+  display: inline-block;
+}
+/* line 62, main.scss */
+.login-span:before {
+  background: url("../images/sprite.png") no-repeat;
+  background-position: -61px -20px;
+  width: 28px;
+  height: 27px;
+  content: "";
+  display: inline-block;
+}
+/* line 70, main.scss */
+.login-span .arrow-icon {
+  display: inline-block;
+  vertical-align: top;
+  padding: 2px 8px;
+}
+/* line 74, main.scss */
+.login-span .arrow-icon:before {
+  background: url("../images/sprite.png") no-repeat;
+  background-position: -113px -23px;
+  width: 15px;
+  height: 15px;
+  content: "";
+  display: inline-block;
+}
+
+/* line 84, main.scss */
 .main-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/head.jpg) no-repeat;
-  background-size: cover;
+  background: url(../images/photo-1.png) no-repeat scroll center center/cover;
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 355px;
   display: inline-block;
-  margin-top: -80px;
+  margin-top: -86px;
 }
 
 /*# sourceMappingURL=main.css.map */

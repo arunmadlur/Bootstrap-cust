@@ -1,0 +1,74 @@
+<div class="main-bg">
+    <div class="wrap-text">
+    	<h2 class="bg-h2-light">STREAM</h2>
+    	<P class="sub-text">Insights,Tips & Articles written by experts on Business and Technology Courses</P>
+    </div>
+    <div class="menu-div">
+    	<div class="container">
+           	<div class="menu-main-list">
+        		<div class="menu-list">
+    	    		<ul class="menu-ul">
+    	    			<li><a href="" class="home-item"></a></li>
+    	    			<li>
+                            <div class="select_box form-control-wrapper">
+                                <select class="form-control-material category-item">
+                                    <option ng-repeat="category in categories" ng-if="!category.subCat">{{category.name}}</option>
+                                     <optgroup ng-repeat="category in categories"  ng-if="category.subCat" label={{category.name}}>
+                                        <option ng-repeat="subcat in category.subCat" ng-if="category.subCat">{{subcat.title}}</option>
+                                     </optgroup>
+                                </select>
+                            </div>
+                        </li>
+    	    			<li><a href="" class="popular-item">Popular</a></li>
+    	    			<li><a href="" class="latest-item">Latest</a></li>
+                        <li class="pull-right">
+                            <div class="search-item">
+                                <span class="search-icon"></span>
+                                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                            </div>
+
+                        </li>
+    	    		</ul>
+        		</div>
+            </div>
+    	</div>	
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="clearfix">
+               <div class="pull-left">
+                   <h3>Project Management</h3>
+               </div> 
+               <div class="pull-right">
+                   <a href="" class="more-link">MORE</a>
+               </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div dir-sl-carousel="">
+                <a href="" class="card_arrows prev_arrow c_prev"></a>
+                <a href="" class="card_arrows next_arrow c_next"></a>
+                <div class="card-main testimonial_div c_screen">
+                    <ul  class="card-list testimonial_div_inner c_list" style='position: relative'> 
+                       <li class="card inner_block c_list_item c_index_{{$index + 1}}" ng-repeat="content in contents">
+                          <div  class="card_wrapper">
+                              <div class="card_img">
+                              <img src="{{content.image_url}}">
+                                <span class="views">{{content.comments}} Views</span>
+                                <span class="like"></span>
+                              </div>
+                              <div class="card-caption">
+                                <p class="sub-heading">{{content.display_name}}</p>  
+                              </div>
+                                
+                          </div> 
+                       </li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+</div>

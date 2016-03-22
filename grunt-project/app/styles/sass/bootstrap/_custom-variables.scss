@@ -36,19 +36,7 @@ $btn-padding-small-horizontal:  10px !default;
 $btn-primary-hover:#eb9e26;
 
 
-//sprite images variable
-$common-path:'http://cfs9.simplicdn.net/frontend/images';
-$home-page-sprite:$common-path + '/home-page_sprite_v1.png';
-$media-home:$common-path + '/content_sprite_v6.png';
-$header-sprite:$common-path + '/header_sprite_v10.png';
-$course-page-sprite:$common-path + '/course_sprite_v8.png';
-$course-page-sprite2:$common-path + '/new-couuse-sprite.png';
-$course-list:$common-path + '/course_list_sprite_v2.png';
-$frs:$common-path + '/free-resources_sprite_imgae.png';
-$about-page:$common-path + '/about-sprite.png';
-$media-page:$common-path + '/media_sprite_v5.jpg';
-$affiliate-page:$common-path + '/affiliate_sprite.png';
-$atp-page:$common-path + 	'/atp_sprite.png';
+
 
 
 $font-size-h1o: (($font-size-base + 18)) !default; // ~54px
