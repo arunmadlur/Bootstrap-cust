@@ -3,18 +3,40 @@
 
 angular.module('gruntProjectApp')
 .controller('HomeCtrl',function($scope,$http){
-	$http.get('http://localhost/Bootstrap-cust/grunt-project/app/data.json')
+	$http.get('data.json')
 	.then(function(response){
 		$scope.contents = response.data.data;
 		console.log($scope.contents);
 	});
-	$http.get('http://localhost/Bootstrap-cust/grunt-project/app/category.json')
+	$http.get('category.json')
 	.then(function(response){
 		$scope.categories = response.data.data;
-		console.log($scope.category);
+		
 		$scope.mycategory = $scope.categories[0];
 	});
 
+    $scope.categoryName = 'All Categories';
+    $scope.getSelectOption = function(value){
+        $scope.categoryName = value ;
+    }
+
+    $scope.A = function(val){
+        document.getElementsByClassName('menu-item-'+val)[0].className += ' active-item'; 
+    }
+    $scope.B = function(val){
+        document.getElementsByClassName('menu-item-'+val)[0].classList.remove("active-item");
+    }
+     $scope.status = {
+        isopen: false
+      };
+
+      $scope.toggled = function(open) {
+        if (open) {
+           document.getElementsByClassName('menu-item-1')[0].className += ' active-item';  
+        }else{
+            document.getElementsByClassName('menu-item-1')[0].classList.remove("active-item");
+        }
+      };
 })
 .factory('$swipe', [function() {
   // The total distance in any direction before we make the call on swipe vs. scroll.

@@ -1,16 +1,14 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
-// bower:scss
-// endbower
 @import "sass/style.scss";
+//caldon project style
+@import "sass/caldon-style/caldon-style.scss";
+@import "sass/caldon-style/caldon-details.scss";
+
+
+
 
 body {
-  font-family: "Gotham Rounded SSm A", "Gotham Rounded SSm B", Helvetica, Arial, sans-serif;
-  font-weight: 300;
   padding: 0;
   margin: 0;
-  font-size: 14px;
-  color: #777;
-  line-height: 24px;
 }
 .h1-text{
 	font-size:24px;
@@ -29,6 +27,9 @@ body {
   color: #ffffff;
   font-weight:$book;
 }
+.light-background .main-menu{
+   color: #232222;
+}
 .main-menu:before{
     background: url($sprite) no-repeat;
     background-position: -21px -22px;
@@ -39,6 +40,10 @@ body {
     content: "";
     vertical-align: middle;
     margin-right: 12px;
+}
+.light-background .main-menu:before{
+    background: url(http://cfi10.simplicdn.net/frontend/images/home-page_sprite_v5.png) no-repeat;
+       background-position: -462px -129px;
 }
 .mid_logo {
     position: absolute;
@@ -83,7 +88,6 @@ body {
 }
 .main-bg{
     background:url(../images/photo-1.png) no-repeat scroll center center / cover;
-    overflow: hidden;
     position: relative;
     width: 100%;
     height: 355px;

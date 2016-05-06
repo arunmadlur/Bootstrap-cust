@@ -1,0 +1,131 @@
+.wrapper-sidebar{
+	overflow:hidden;
+    height: 100%;
+}
+
+.content-sidebar-focus{
+	border-radius: 2px;
+	border:0;
+  	background-color: #ffffff;
+  	color: rgba(10, 9, 9, 0.8);
+  	box-shadow:0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+  	margin-top:-1px; 
+}
+.content-sidebar {
+	overflow-y: scroll;
+	height:100%;	
+	li{
+	  	border-bottom: solid 1px $border-color;
+	  	width: 96%;
+	    margin: 0 1%;
+	    box-sizing: border-box;
+	}
+}
+.content-sidebar li a{
+	@extend .sub-heading;
+	color: rgba(10, 9, 9, 0.3);
+	padding: 25px 8px 20px 18px;
+    display: inline-block;
+    &:hover,&.active{
+    	@extend .content-sidebar-focus
+    }
+    .content-title{
+    	display: block;
+    	margin-bottom: 15px;
+    }
+    .content-type{
+    	font-size: 16px;
+    	display: block;
+    	text-transform: capitalize;
+    }
+    
+}
+
+.cn-head-img img{
+	width:100%;
+	height: 348px;
+}
+.author-img-wrap{
+	width: 88px;
+    height: 88px;
+    overflow: hidden;
+}
+.custom-hr{
+	height: 3px;
+  	opacity: 0.8;
+  	border-top: solid 1px #b0b0b0;
+  	margin-top: 0px;
+    margin-bottom: 10px;
+}
+.cn-author{
+	.media-left{
+	    padding-right: 20px;
+	}
+}
+.social-sharing{
+	li{
+		display: inline-block;
+		padding:0 3px;
+		a{
+			&:after{
+				background:url($caldon-sprite) no-repeat;
+				content: "";
+				width:26px;
+				height: 26px;
+				display: inline-block;
+			}	
+		}
+	}
+	a.social-twitter:after{
+		background-position: -361px -80px;
+	}
+	a.social-facebook:after{
+		background-position:-405px -80px;
+	}
+	a.social-linkedin:after{
+		background-position:-449px -80px;
+	}
+	a.social-like:after{
+		background-position:-716px -80px;
+	}
+}
+.content-rating{
+	li{
+		float: left;
+		padding-right:25px;
+	}
+}
+.content-description{
+	margin-top:40px;
+}
+.about-author{
+	margin-bottom:20px;
+}
+.comment-section{
+	width:200px;
+	margin: 20px auto;
+	.comment-lable{
+		font-weight:$medium;
+	  	font-size: 14px;
+	  	letter-spacing: 0.5px;
+	  	color: #00a6df;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+   	.wrapper-sidebar.affix{
+	    width: 219px;
+	}
+	.content-sidebar{
+		 width: 225px;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.wrapper-sidebar.affix{
+	    width: 270px;
+	}
+	.content-sidebar{
+		width: 290px;
+	}
+}

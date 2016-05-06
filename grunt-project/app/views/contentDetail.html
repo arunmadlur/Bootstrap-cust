@@ -1,0 +1,85 @@
+<!-- Begin Body -->
+<div class="container">
+	<div class="row">
+  	<div class="col-md-3 col-sm-4" id="leftCol">
+  		<nav class="wrapper-sidebar hidden-print hidden-xs affix">	
+      	<ul class="nav nav-stacked content-sidebar">
+      	  <li ng-repeat="content in contents">
+      	  	<a href="#content_{{content.id}}" du-smooth-scroll du-scrollspy>
+      	  		<span class="content-title">{{content.display_name}}</span>
+      	  		<span class="content-type">{{content.type}}</span>
+      	  	</a>	
+
+      	  </li>		
+      	</ul>
+      </nav>
+    </div>  
+    <div class="col-md-9 col-sm-8" id="mainCol">    
+  		<div ng-repeat="content in contents">
+  			<div id="content_{{content.id}}" class="all_block head_{{content.id}}">
+  				<div class="content-wrap">
+  					<div class="cn-head-img">
+  						<img src="{{content.image_url}}">
+  					</div>
+            <h2 class="book">{{content.display_name}}</h2>
+            <div class="cn-author">
+              <div class="media">
+                  <div class="media-left">
+                    <div class="author-img-wrap">
+                      <img class="media-object img-responsive img-circle" src="{{content.author_image}}" alt="..."> 
+                    </div>  
+                      
+                  </div>
+                  <div class="media-body">
+                    <h3 class="media-heading">{{content.author_name}}</h3>
+                    <div class="row">
+                      <div class="col-md-9">
+                          <p class="default-text">Published on {{content.created_at | date}}</p>
+                      </div>
+                      <div class="col-md-3">
+                          <ul class="social-sharing">
+                            <li><a href="" class="social-twitter"></a></li>
+                            <li><a href="" class="social-facebook"></a></li>
+                            <li><a href="" class="social-linkedin"></a></li>
+                            <li class="pull-right"><a href="" class="social-like"></a></li>
+                          </ul>
+                      </div>
+                    </div>
+                   
+                    <hr class="custom-hr">
+                    <ul class="content-rating caption">
+                      <li>{{content.views}} Views</li>
+                      <li>{{content.likes}} likes</li>
+                      <li>{{content.comments}} Comment</li>
+
+                    </ul>
+                  </div>
+              </div>
+            </div>
+            <div class="content-description" ng-bind-html="content.article_content | rawHtml">
+              
+            </div>
+            <div class="about-author clearfix">
+              <h3>About Author</h3>
+              <p class="default-text">{{content.author_description}}</p>
+            </div>
+            <hr class="custom-hr">
+            <div class="text-center">
+    				  <div class="comment-section">
+                  <p class="comment-lable">LEAVE COMMENT</p>
+                  <div class="form-control-wrapper">
+                    <input type="text" class="form-control-material">
+                    <div class="floating-label_border"></div>
+                  </div>
+              </div>
+            </div>
+          </div>
+	
+			
+  			</div>
+  		</div>
+    </div> 
+  	</div>
+</div>
+
+

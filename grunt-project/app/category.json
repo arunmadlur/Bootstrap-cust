@@ -15,138 +15,135 @@
    {
        "id": 4,
        "name": "Business",
-       "subCat":[
-           {
-                "id":1,
-                "title":"Project Management"
-            },
-            {
-                "id":2,
-                "title":"Agile and Scrum Certification"
-            },
-            {
-                "id":3,
-                "title":"Quality Management"
-            },
-            {
-                "id":4,
-                "title":"IT Service and Architecture"
-            },
-            {
-                "id":5,
-                "title":"Big Data and Analytics"
-            },
-            {
-                "id":6,
-                "title":"Finance Management"
-            },
-            {
-                "id":7,
-                "title":"SAP Certification"
-            },
-            {
-                "id":8,
-                "title":"Microsoft Certification"
-            },
-            {
-                "id":9,
-                "title":"Cisco Certification"
-            },
-            {
-                "id":10,
-                "title":"Software Testing"
-            },
-            {
-                "id":11,
-                "title":"CompTIA Certification"
-            },
-            {
-                "id":12,
-                "title":"Digital Marketing"
-            },
-            {
-                "id":13,
-                "title":"Salesforce Training"
-            },
-            {
-                "id":14,
-                "title":"Web and Programming"
-            },
-            {
-                "id":15,
-                "title":"Business Productivity Tools"
-            },
-            {
-                "id":16,
-                "title":"All Course Access"
-            }    
-       ]
-   }
-   ,
-   {
-       "id": 5,
+       "subCat":true
+    },
+     {
+          "id":5,
+          "name":"Project Management"
+      },
+      {
+          "id":6,
+          "name":"Agile and Scrum Certification"
+      },
+      {
+          "id":7,
+          "name":"Quality Management"
+      },
+      {
+          "id":8,
+          "name":"IT Service and Architecture"
+      },
+      {
+          "id":9,
+          "name":"Big Data and Analytics"
+      },
+      {
+          "id":10,
+          "name":"Finance Management"
+      },
+      {
+          "id":11,
+          "name":"SAP Certification"
+      },
+      {
+          "id":12,
+          "name":"Microsoft Certification"
+      },
+      {
+          "id":13,
+          "name":"Cisco Certification"
+      },
+      {
+          "id":14,
+          "name":"Software Testing"
+      },
+      {
+          "id":15,
+          "name":"CompTIA Certification"
+      },
+      {
+          "id":16,
+          "name":"Digital Marketing"
+      },
+      {
+          "id":17,
+          "name":"Salesforce Training"
+      },
+      {
+          "id":18,
+          "name":"Web and Programming"
+      },
+      {
+          "id":19,
+          "name":"Business Productivity Tools"
+      },
+      {
+          "id":20,
+          "name":"All Course Access"
+      },
+      {
+       "id": 21,
        "name": "Technology",
-       "subCat": [
-           {
-               "id":1,
-                "title":"Design & Multimedia"
-           },
-           {
-               "id":2,
-                "title":"IT Hardware and Networking"
-           },
-           {
-               "id":3,
-                "title":"IT Security Management"
-           },
-           {
-               "id":4,
-                "title":"Project Management"
-           },
-           {
-               "id":5,
-                "title":"Agile and Scrum Certification"
-           },
-           {
-               "id":6,
-                "title":"Quality Management"
-           },
-           {
-               "id":7,
-                "title":"IT Service and Architecture"
-           },
-           {
-               "id":8,
-                "title":"Big Data and Analytics"
-           },
-           {
-               "id":9,
-                "title":"IT Services and Security"
-           },
-           {
-               "id":10,
-                "title":"ERP"
-           },
-           {
-               "id":11,
-                "title":"Virtualization and Cloud Computing"
-           },
-           {
-               "id":12,
-                "title":"OS and Databases"
-           },
-           {
-               "id":13,
-                "title":"Cloud Computing"
-           },
-           {
-               "id":14,
-                "title":"Web App and Programming"
-           },
-           {
-               "id":15,
-                "title":"All Course Access"
-           }
-       ]
-   }
+       "subCat": true
+      },
+       {
+           "id":22,
+            "name":"Design & Multimedia"
+       },
+       {
+           "id":23,
+            "name":"IT Hardware and Networking"
+       },
+       {
+           "id":24,
+            "name":"IT Security Management"
+       },
+       {
+           "id":25,
+            "name":"Project Management"
+       },
+       {
+           "id":26,
+            "name":"Agile and Scrum Certification"
+       },
+       {
+           "id":27,
+            "name":"Quality Management"
+       },
+       {
+           "id":28,
+            "name":"IT Service and Architecture"
+       },
+       {
+           "id":29,
+            "name":"Big Data and Analytics"
+       },
+       {
+           "id":30,
+            "name":"IT Services and Security"
+       },
+       {
+           "id":31,
+            "name":"ERP"
+       },
+       {
+           "id":32,
+            "name":"Virtualization and Cloud Computing"
+       },
+       {
+           "id":33,
+            "name":"OS and Databases"
+       },
+       {
+           "id":34,
+            "name":"Cloud Computing"
+       },
+       {
+           "id":35,
+            "name":"Web App and Programming"
+       },
+       {
+           "id":36,
+            "name":"All Course Access"
+       }
 ]}

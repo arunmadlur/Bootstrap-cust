@@ -1,6 +1,6 @@
 <div class="main-bg">
     <div class="wrap-text">
-    	<h2 class="bg-h2-light">STREAM</h2>
+    	<h2 class="bg-h2-book">STREAM</h2>
     	<P class="sub-text">Insights,Tips & Articles written by experts on Business and Technology Courses</P>
     </div>
     <div class="menu-div">
@@ -8,26 +8,39 @@
            	<div class="menu-main-list">
         		<div class="menu-list">
     	    		<ul class="menu-ul">
-    	    			<li><a href="" class="home-item"></a></li>
-    	    			<li>
-                            <div class="select_box form-control-wrapper">
-                                <select class="form-control-material category-item">
-                                    <option ng-repeat="category in categories" ng-if="!category.subCat">{{category.name}}</option>
-                                     <optgroup ng-repeat="category in categories"  ng-if="category.subCat" label={{category.name}}>
-                                        <option ng-repeat="subcat in category.subCat" ng-if="category.subCat">{{subcat.title}}</option>
-                                     </optgroup>
-                                </select>
-                            </div>
-                        </li>
-    	    			<li><a href="" class="popular-item">Popular</a></li>
-    	    			<li><a href="" class="latest-item">Latest</a></li>
-                        <li class="pull-right">
-                            <div class="search-item">
-                                <span class="search-icon"></span>
-                                <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                            </div>
+    	    			<li class="home-item"><a href="" ></a></li>
+    	    			<li class="menu-item-1">
+                 <!--    <div class="select_box form-control-wrapper">
+                        <select class="form-control-material category-item">
+                            <option ng-repeat="category in categories" ng-if="!category.subCat">{{category.name}}</option>
+                             <optgroup ng-repeat="category in categories"  ng-if="category.subCat" label={{category.name}}>
+                                <option ng-repeat="subcat in category.subCat" ng-if="category.subCat">{{subcat.title}}</option>
+                             </optgroup>
+                        </select>
+                    </div> -->
+              <div class="select_box form-control-wrapper">  
+                <div class="btn-group" uib-dropdown keyboard-nav is-open="status.isopen" on-toggle="toggled(open)">
+                  <button id="simple-btn-keyboard-nav" type="button"  class="btn category-item" uib-dropdown-toggle>
+                    <span class="category-name"> {{categoryName | limitTo:22}} {{categoryName.length > 22 ? "..." : ""}}</span> <span class="caret"></span>
+                  </button>
+                  <ul  uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                      <li role="menuitem" ng-repeat="category in categories" ng-click="getSelectOption(category.name)"><a href="">{{category.name}}</a></li>
+                      
 
-                        </li>
+                    
+                  </ul>
+              </div>
+            </div>
+                  </li>
+    	    			<li  class="popular-item menu-item-2"><a href="" ng-focus="A(2)" ng-blur="B(2)">Popular</a></li>
+    	    			<li class="latest-item menu-item-3"><a href="" ng-focus="A(3)" ng-blur="B(3)">Latest</a></li>
+                <li class="search-item menu-item-4 pull-right">
+                    <div class="search-wrap">
+                        <span class="search-icon"></span>
+                        <input type="text" ng-focus="A(4)" ng-blur="B(4)" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+                    </div>
+
+                </li>
     	    		</ul>
         		</div>
             </div>
@@ -53,6 +66,40 @@
                 <div class="card-main testimonial_div c_screen">
                     <ul  class="card-list testimonial_div_inner c_list" style='position: relative'> 
                        <li class="card inner_block c_list_item c_index_{{$index + 1}}" ng-repeat="content in contents">
+                        <a href="#/{{content.display_name}}">
+                            <div  class="card_wrapper">
+                                <div class="card_img">
+                                <img src="{{content.image_url}}">
+                                  <span class="views">{{content.comments}} Views</span>
+                                  <span class="like"></span>
+                                </div>
+                                <div class="card-caption">
+                                  <p class="sub-heading">{{content.display_name| limitTo:50 }}{{content.display_name.length > 50 ? "..." : ""}}</p>  
+                                </div>    
+                            </div> 
+                          </a>
+                       </li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="col-md-12">
+            <div class="clearfix">
+               <div class="pull-left">
+                   <h3>Agile and Scrum Certification Articles</h3>
+               </div> 
+               <div class="pull-right">
+                   <a href="" class="more-link">MORE</a>
+               </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div dir-sl-carousel="">
+                <a href="" class="card_arrows prev_arrow c_prev"></a>
+                <a href="" class="card_arrows next_arrow c_next"></a>
+                <div class="card-main testimonial_div c_screen">
+                    <ul  class="card-list testimonial_div_inner c_list" style='position: relative'> 
+                       <li class="card inner_block c_list_item c_index_{{$index + 1}}" ng-repeat="content in contents">
                           <div  class="card_wrapper">
                               <div class="card_img">
                               <img src="{{content.image_url}}">
@@ -60,7 +107,7 @@
                                 <span class="like"></span>
                               </div>
                               <div class="card-caption">
-                                <p class="sub-heading">{{content.display_name}}</p>  
+                                <p class="sub-heading">{{content.display_name | limitTo:50 }}... </p>  
                               </div>
                                 
                           </div> 

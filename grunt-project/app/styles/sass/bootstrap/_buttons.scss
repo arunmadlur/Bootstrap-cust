@@ -12,7 +12,8 @@
   margin-bottom: 0; // For input.btn
   font-weight:$btn-font-weight;
   text-align: center;
-  // text-transform:uppercase;
+  letter-spacing: 0.5px;
+ text-transform:uppercase;
   vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
@@ -59,30 +60,72 @@
 
   // [converter] extracted a& to a.btn
 }
-.btn::after {
-  position: absolute;
-  content: " ";
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle at center,#FFF  0%,#FFF 10%,transparent 10.01%,transparent 100%);
-  background-size: 1% 1%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  transition: 0.3s background-color ease-in;
-  opacity: 0.3;
+// .btn::after {
+//   position: absolute;
+//   content: " ";
+//   height: 100%;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+//   pointer-events: none;
+//   background-image: radial-gradient(circle at center,#FFF  0%,#FFF 10%,transparent 10.01%,transparent 100%);
+//   background-size: 1% 1%;
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   background-color: transparent;
+//   transition: 0.3s background-color ease-in;
+//   opacity: 0.3;
+// }
+
+// .btn:active::after {
+// 				background-size: 10000% 10000%;
+// 				transition: 0.25s background-size ease-out, 0.15s background-color ease-in;
+// 				background-color: #DBDBDB;
+// 				box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 3px rgba(0,0,0,0.23);
+//         opacity: 0.3; 
+// 			}
+
+
+
+.btn:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    opacity: .6;
+    border-radius:25%;
+    transform: scale(0);
+    transform: scale(0);
+}
+.btn-lg:after{
+  margin-left: -98px;
+  margin-top: -21px;
+}
+.btn-sm:after{
+  margin-left: -92px;
+  margin-top: -17px;
+}
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
 }
 
-.btn:active::after {
-				background-size: 10000% 10000%;
-				transition: 0.25s background-size ease-out, 0.15s background-color ease-in;
-				background-color: #DBDBDB;
-				box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 3px rgba(0,0,0,0.23);
-        opacity: 0.3; 
-			}
+.btn:not(:active):after {
+  animation: ripple 1s ease-out;
+}
+
 
 a.btn {
   &.disabled,
@@ -157,7 +200,6 @@ a.btn {
 
   //extra added
   height: 42px;
-  text-transform: uppercase;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
 }
@@ -165,7 +207,6 @@ a.btn {
   // line-height: ensure proper height of button next to small input
   @include button-size($btn-padding-small-vertical, $btn-padding-small-horizontal, $font-size-base, $line-height-small, $btn-border-radius-base);
   height: 32px;
-  text-transform: uppercase;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 .btn-xs {

@@ -1,24 +1,14 @@
 //for each ice9 buttons, define text, background and border color
 
-//primary buttons
-$primary-color:#f8ab33;
-$secondary-color:#00a7dc;
-$ternary-color:#0080a7;
-
+// sprite image
+$sprite-guid: '../images/Boostrap3_grid_System.png';
 //header colors
 $header-color:rgba(0, 0, 0, 0.9);
 
-//backgroud light color
-$background-light:#efefef;
-
 //border-color
-$border-color:rgba(0, 0, 0, 0.2);
-$border-color-light:#edeff0;
+$border-color:#d8d8d8;
 
-//grey colors
-$grey:#3b444f;
-$grey-light:#5e676d;
-$grey-lighter:#a1abb2;
+
 
 //material forms colors
 $check-color: #00a6df;
@@ -34,10 +24,6 @@ $btn-padding-small-horizontal:  10px !default;
 
 
 $btn-primary-hover:#eb9e26;
-
-
-
-
 
 $font-size-h1o: (($font-size-base + 18)) !default; // ~54px
 $margin-bottom : 15px;
